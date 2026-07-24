@@ -1,0 +1,1100 @@
+/* ==========================================================================
+   Background Color Mapping & Canvas Styling 
+   ========================================================================== */
+
+/* Main deep container background */
+.global-app-bg {
+  background-color: #090d16;
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Individual Content Sections color adjustments */
+.about-section,
+.ttstyles-section,
+.destinations-section,
+.packages-section {
+  background-color: #090d16;
+  padding: 5rem 2rem;
+}
+
+/* Isolated corporate inner container background */
+.dashboard-sections-wrapper {
+  background-color: #030712;
+  padding: 6rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Inner dashboard subsection spaces */
+.dashboard-services-section,
+.dashboard-solutions-section,
+.dashboard-stories-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Separator styling */
+.layout-divider-line {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.08), transparent);
+  margin: 4rem 0;
+}
+
+/* Base header text treatments inside dark layout */
+.ttstyles-header h2 {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.ttstyles-header p {
+  color: #9ca3af;
+}
+
+
+
+
+.hero{
+  height:500px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color: #e0e2e5;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#111;
+  color:#fff;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.6rem 1.3rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.btn-primary {
+ background-color: #e0e2e5;
+  color: rgb(22, 22, 22);
+}
+
+.btn-primary:hover {
+  background-color: #93c5fd;
+  color: #0b0f19;
+}
+
+.btn-secondary {
+  background-color:  #587298;
+  color:  #111;
+}
+
+.btn-secondary:hover {
+  background-color: #93b7ea;
+  color: #101011;
+}
+
+.hero-section {
+  position: relative;
+ align-content: center;
+ 
+ 
+  min-height: 85vh;
+  width: 100%;
+  color: #f8fafc;
+  overflow: hidden;
+  transition: background-image 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.zoom-animation {
+  animation: slowZoom 6s infinite alternate ease-in-out;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  
+  padding:0px 180px;
+}
+
+.hero-content h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #ffffff, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  max-width: 650px;
+  margin: 0px 0px 20px 0px;
+    line-height: 1.6;
+}
+
+/* --- Right Side Slide Animation Mechanics --- */
+.hidden {
+  opacity: 0;
+}
+
+.slide-right-text {
+  animation: slideFromRight 0.8s forwards cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slide-right-desc {
+  animation: slideFromRight 0.8s forwards cubic-bezier(0.25, 1, 0.5, 1);
+  animation-delay: 0.12s; /* Slight delay for staggered look */
+  opacity: 0;
+}
+
+.slide-right-buttons {
+  animation: slideFromRight 0.8s forwards cubic-bezier(0.25, 1, 0.5, 1);
+  animation-delay: 0.24s; /* Enters last */
+  opacity: 0;
+}
+
+/* Keyframes shifting element on the X-axis (Horizontal) */
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px); /* Starts off-screen to the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Lands smoothly in center */
+  }
+}
+
+/* --- Structural UI Buttons & Dots --- */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(4px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.nav-arrow:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.left-arrow { left: 2rem; }
+.right-arrow { right: 2rem; }
+
+.slide-dots {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  gap: 0.75rem;
+  z-index: 10;
+  left: 200px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #3b82f6;
+  width: 28px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .nav-arrow { display: none; }
+  .hero-content h1 { font-size: 2.6rem; }
+}
+
+
+.about-section {
+  padding: 6rem 10%;
+  
+  color: #f8fafc;
+  overflow: hidden;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Column Left: Visual Structures --- */
+.about-visuals {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  width: 100%;
+  max-width: 480px;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid #334155;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover .about-img {
+  transform: scale(1.04);
+}
+
+/* Floating Metrics Layout Block overlay */
+.stats-badge {
+  position: absolute;
+  bottom: -2rem;
+  right: -1rem;
+  background: rgba(30, 41, 59, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  display: flex;
+  gap: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #3b82f6; /* Accent blue highlight */
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.25rem;
+}
+
+/* --- Column Right: Content Blocks --- */
+.about-content {
+  flex: 1;
+}
+
+.about-tagline {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #3b82f6;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.about-content h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #afabab, #0664d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-lead {
+  font-size: 1.15rem;
+  color: #262727;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.about-body {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+/* Embedded Core Value Points styling rules */
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.feature-bullet {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.bullet-icon {
+  font-size: 1.5rem;
+  background-color: #1e293b;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  line-height: 1;
+}
+
+.feature-bullet h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #408ec1;
+}
+
+ 
+
+.ttstyles-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.ttstyles-subtitle{
+    color:#ff7b2c;
+    font-weight:700;
+    letter-spacing:3px;
+    font-size: 15px;
+}
+
+.ttstyles-header h2{
+    font-size:35px;
+    color:#fff;
+    margin:20px 0;
+}
+
+.ttstyles-header p{
+    color:#666;
+    font-size:14px;
+}
+
+.ttstyles-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.ttstyles-card{
+    height:230px;
+    background-size:cover;
+    background-position:center;
+    border-radius:18px;
+    overflow:hidden;
+    position:relative;
+    cursor:pointer;
+    transition:.5s;
+}
+
+.ttstyles-card:hover{
+    transform:translateY(-10px);
+}
+
+.ttstyles-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+      to top,
+      rgba(0,0,0,.8),
+      rgba(0,0,0,.2)
+    );
+}
+
+.ttstyles-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:25px;
+}
+
+.ttstyles-icon{
+    width:70px;
+    height:70px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+}
+
+.ttstyles-info h3{
+    color:#fff;
+    font-size:28px;
+    line-height:1.2;
+}
+
+.ttstyles-info h3 span{
+    font-weight:400;
+}
+
+.ttstyles-line{
+    width:50px;
+    height:3px;
+    background:#ff7b2c;
+    margin:15px 0;
+}
+
+.ttstyles-info p{
+    color:#fff;
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.ttstyles-info button{
+    background:transparent;
+    color:#fff;
+    border:1px solid #fff;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.ttstyles-info button:hover{
+    background:#fff;
+    color:#000;
+}
+
+@media(max-width:991px){
+    .ttstyles-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:767px){
+    .ttstyles-grid{
+        grid-template-columns:1fr;
+    }
+
+    .ttstyles-header h2{
+        font-size:38px;
+    }
+}
+
+.feature-bullet p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+/* Interactive CTA Button Element */
+.about-cta-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.about-cta-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* --- Micro-Animations --- */
+.animate-slide-left {
+  animation: slideLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-slide-right {
+  animation: slideRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.animate-fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- Responsive Layout Configurations --- */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .about-visuals {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .image-wrapper {
+    height: 400px;
+  }
+}
+
+
+
+
+.dashboard-sections-wrapper {
+ 
+  color: #f1f5f9;
+  padding: 6rem 10%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.layout-divider-line {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, rgba(51, 65, 85, 0), rgba(51, 65, 85, 1), rgba(51, 65, 85, 0));
+  margin: 5rem 0;
+}
+
+/* --- Shared Typographic Titles --- */
+.section-title-area {
+  margin-bottom: 3.5rem;
+  
+}
+
+.section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #3b82f6; /* Vivid blue accent */
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title-area h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #4386c4;
+  letter-spacing: -0.5px;
+}
+
+/* --- SECTION 1: CORE SERVICES CSS --- */
+.services-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card-item {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 2.2rem 1.8rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card-item:hover {
+  transform: translateY(-5px);
+  border-color: #3b82f6;
+  box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+}
+
+.service-icon-frame {
+  font-size: 1.8rem;
+  background: #1f2937;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.service-card-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.service-card-item p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* --- SECTION 2: INDUSTRY SOLUTIONS CSS --- */
+.solutions-flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.solution-panel-card {
+  flex: 1;
+  min-width: 300px;
+  background: linear-gradient(135deg, #111827 0%, #111827 100%);
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.solution-meta-pill {
+  align-self: flex-start;
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.solution-metric-display {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.solution-desc-text {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.solution-card-footer {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #3b82f6;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.solution-card-footer:hover {
+  color: #60a5fa;
+}
+
+/* --- SECTION 3: CLIENT SUCCESS STORIES CSS --- */
+.stories-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+}
+
+.story-testimonial-card {
+  background-color: #111827;
+  border-left: 4px solid #3b82f6;
+  padding: 2.5rem;
+  border-radius: 0 16px 16px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-mark-vector {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.412);
+  font-family: serif;
+  user-select: none;
+}
+
+.client-company-tag {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.client-testimonial-quote {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.client-author-signature {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive optimization for compact touch displays */
+@media (max-width: 640px) {
+  .stories-grid-layout {
+    grid-template-columns: 1fr;
+  }
+  .section-title-area h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Features Section */
+.features-section {
+  padding: 6rem 10%;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: var(--card-bg);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: left;
+  border: 1px solid #334155;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 3rem;
+  border-top: 1px solid #1e293b;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Simplification for brief code snippet */
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding:0px 18px;
+    }
+}
+
+
+/* Container Sections styling setup */
+.destinations-section {
+  padding: 6rem 10%;
+  
+  color: #5386b9;
+}
+
+.packages-section {
+  padding: 6rem 10%;
+ 
+  color: #5386b9;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #58b0cd;
+}
+
+.section-subtitle {
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+
+/* Control Navigation Buttons UI */
+.slider-controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.slider-btn {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.slider-btn:hover {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+/* Reusable Slider Track Framework System Mechanics */
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+}
+
+/* Card Component Structural Types (Destination & Package) */
+.destination-card, .package-card {
+  max-width: 300px; /* Strict calculation layout based on cardsVisible */
+  margin-right: 2rem;
+  background-color: #1e293b;
+  border-radius: 14px;
+  border: 1px solid #334155;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover, .package-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Images Aspect Container Wrappers */
+.card-image-wrapper, .package-image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image, .package-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Inner Layout Card Blocks formatting text typography */
+.card-body, .package-body {
+  padding: 1.5rem;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.card-action-btn {
+  background: transparent;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.card-action-btn:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Package Card Meta Elements */
+.package-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+
+.package-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+.package-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  min-height: 50px;
+}
+
+.package-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #334155;
+  padding-top: 1rem;
+}
+
+.package-price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.price-amount {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.btn-book {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-book:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive Media Viewports queries fallback settings */
+@media (max-width: 1024px) {
+  .destination-card, .package-card {
+    min-width: calc(50% - 1rem); /* Drops to displaying 2 elements on mid tablets */
+  }
+}
+
+@media (max-width: 640px) {
+  .destination-card, .package-card {
+    min-width: 100%; /* Displays single width elements on standard mobile displays */
+    margin-right: 0;
+  }
+}

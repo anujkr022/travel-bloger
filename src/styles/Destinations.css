@@ -1,0 +1,357 @@
+/* ==========================================================================
+   Global Page Canvas Rules
+   ========================================================================== */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #0b0f19;
+  color: #f3f4f6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.overview-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.destination-section {
+  width: 100%;
+}
+
+/* --- Section Headers Layout --- */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.view-all-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6366f1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.view-all-link:hover {
+  color: #818cf8;
+}
+
+/* ==========================================================================
+   1. Trending Hardware-Accelerated Slider Structure
+   ========================================================================== */
+.project-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 76px;
+}
+
+.trending-action-controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.trend-nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.trend-nav-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.trend-nav-btn:hover {
+  background: #6366f1;
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+.trending-slider-mask {
+  overflow: hidden;
+  width: 100%;
+}
+
+.trending-slider-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.slider-node-item {
+  flex-shrink: 0;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+
+/* Slider Cards Decoration Layout */
+.trending-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 400px;
+}
+
+.trending-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.trending-card:hover img {
+  transform: scale(1.04);
+}
+
+.trend-badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: rgba(11, 15, 25, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ff4757;
+  z-index: 2;
+}
+
+.trending-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 15, 25, 0.95) 0%, rgba(11, 15, 25, 0.4) 50%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.trending-overlay h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   2. Popular Rows Layout Matrix
+   ========================================================================== */
+.popular-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.popular-card {
+  display: flex;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.popular-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-4px);
+}
+
+.popular-card img {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popular-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popular-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.popular-info p {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+.popular-info .rating {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fbbf24;
+}
+
+/* ==========================================================================
+   3. Explore Bento Grid Architecture
+   ========================================================================== */
+.explore-bento {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+}
+
+.bento-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 380px;
+}
+
+/* Swap column sizes if necessary on alternate loops */
+.bento-card:nth-child(2) {
+  height: 380px;
+}
+
+.bento-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bento-content {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 15, 25, 0.95) 10%, rgba(11, 15, 25, 0.2) 70%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem;
+}
+
+.bento-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.bento-content p {
+  margin: 0;
+  font-size: 1rem;
+  color: #d1d5db;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+/* ==========================================================================
+   4. Top Rated Grid List Decorators
+   ========================================================================== */
+.top-dest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.top-dest-card {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.top-dest-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.top-number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(99, 102, 241, 0.1);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  line-height: 1;
+}
+
+.top-dest-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.top-dest-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Media Queries & Mobile Responsive Fallbacks
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .explore-bento {
+    grid-template-columns: 1fr;
+  }
+  .popular-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-wrapper {
+    padding: 2rem 1rem;
+    gap: 4rem;
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .top-dest-grid {
+    grid-template-columns: 1fr;
+  }
+  .popular-card {
+    flex-direction: column;
+  }
+  .popular-card img {
+    width: 100%;
+    height: 200px;
+  }
+}

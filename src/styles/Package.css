@@ -1,0 +1,290 @@
+/* ==========================================================================
+   DestinationAlt.css - Alternative Premium Editorial Design
+   ========================================================================== */
+
+.alt-wrapper {
+  background-color: #0b0f19;
+  color: #f3f4f6;
+  padding: 6rem 2rem;
+  font-family: "Playfair Display", Georgia, serif; /* Elegant typography fallback */
+}
+
+.alt-section {
+  max-width: 1140px;
+  margin: 0 auto 8rem auto;
+}
+
+.alt-header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.alt-header h2 {
+  font-size: 2.75rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.alt-header p {
+  font-family: system-ui, sans-serif;
+  color: #9ca3af;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+/* --- 1. TRENDING SECTION: Editorial Vertical Cards --- */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+.editorial-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorial-img-frame {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.editorial-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover .editorial-img-frame img {
+  transform: scale(1.04);
+}
+
+.editorial-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0b0f19;
+  padding: 0.4rem 1rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.editorial-details {
+  padding-top: 1.5rem;
+}
+
+.editorial-details h3 {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 400;
+}
+
+.editorial-meta {
+  font-family: system-ui, sans-serif;
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* --- 2. POPULAR SECTION: Split Feature Rows --- */
+.split-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.split-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .split-row { grid-template-columns: 1.2fr 1fr; }
+  .split-row.reverse { direction: rtl; }
+  .split-row.reverse .split-text { direction: ltr; } /* Reset text flow direction */
+}
+
+.split-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.split-text {
+  padding: 1rem;
+}
+
+.split-text h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+.split-text p {
+  font-family: system-ui, sans-serif;
+  color: #9ca3af;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.split-footer {
+  font-family: system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.split-rating { color: #fbbf24; font-weight: 600; }
+.split-price { font-size: 1.2rem; font-weight: 700; color: #ffffff; }
+
+/* --- 3. EXPLORE SECTION: Circular Interactive Bubbles --- */
+.bubble-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.bubble-card {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.bubble-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.bubble-card:hover img {
+  transform: scale(1.1);
+}
+
+.bubble-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 15, 25, 0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  transition: background 0.3s;
+}
+
+.bubble-card:hover .bubble-overlay {
+  background: rgba(99, 102, 241, 0.8);
+}
+
+.bubble-overlay h3 { font-size: 1.5rem; font-weight: 400; margin-bottom: 0.5rem; }
+.bubble-overlay p { font-family: system-ui, sans-serif; font-size: 0.85rem; color: #e5e7eb; margin: 0; }
+
+/* --- 4. TOP RANKED: Timeline Grid Rows --- */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: baseline;
+}
+
+.timeline-index {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #6366f1;
+}
+
+.timeline-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+
+.alt-header-slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+}
+
+.alt-header-slider-wrapper .alt-header {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.editorial-slider-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.editorial-slider-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.editorial-slider-btn:hover {
+  background: #6366f1;
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+.editorial-slider-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.editorial-slider-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card-slider-item {
+  flex-shrink: 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .timeline-content { grid-template-columns: 1fr 2fr 100px; align-items: center; }
+}
+
+.timeline-content h3 { font-size: 1.6rem; font-weight: 400; margin: 0; }
+.timeline-content p { font-family: system-ui, sans-serif; color: #9ca3af; line-height: 1.6; margin: 0; font-size: 0.95rem; }
+.timeline-action { font-family: system-ui, sans-serif; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-align: right; }

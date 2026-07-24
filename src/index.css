@@ -1,0 +1,262 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,sans-serif;
+}
+ 
+
+
+
+
+/* =========================================================================
+   FOOTER ARCHITECTURE THEME RULES
+   ========================================================================= */
+.premium-footer-root {
+  background-color: #090d16; /* Deep space dark base */
+  border-top: 1px solid #1e293b;
+  color: #cbd5e1;
+  padding: 5rem 8% 5rem 8%;
+  font-family: 'Inter', system-ui, sans-serif;
+  
+  margin: 0 auto;
+}
+
+/* --- Top Deck Layout --- */
+.footer-top-deck {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand-column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 420px;
+}
+
+.footer-logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-accent {
+  color: #3b82f6; /* Accent neon blue */
+}
+
+.brand-pitch {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 1rem 0 1.5rem 0;
+}
+
+/* Social Glyph Links */
+.social-glyph-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-link {
+  background-color: #111726;
+  border: 1px solid #1e293b;
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: monospace;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Newsletter Component Styles */
+.footer-newsletter-column {
+  flex: 1.2;
+  min-width: 320px;
+  background-color: #111726;
+  border: 1px solid #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.footer-newsletter-column h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.footer-newsletter-column p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+}
+
+.newsletter-form-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-input {
+  flex: 1;
+  background-color: #090d16;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.newsletter-input:focus {
+  border-color: #3b82f6;
+}
+
+.newsletter-submit-btn {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-submit-btn:hover {
+  background-color: #2563eb;
+}
+
+.subscription-success {
+  color: #10b981;
+  font-size: 0.85rem;
+  background-color: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* --- Structural Dividers --- */
+.footer-divider-line {
+  border: 0;
+  height: 1px;
+  background-color: #1e293b;
+  margin: 0 0 3.5rem 0;
+}
+
+/* --- Middle Deck Navigation Columns --- */
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.link-group-node h5 {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 1.2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.link-group-node ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-group-node li {
+  margin-bottom: 0.75rem;
+}
+
+.link-group-node a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.15s ease;
+}
+
+.link-group-node a:hover {
+  color: #3b82f6;
+}
+
+/* --- Bottom Deck Systems Metadata --- */
+.footer-bottom-deck {
+  border-top: 1px solid #1e293b;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.legal-right-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legal-right-row a {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.legal-right-row a:hover {
+  color: #3b82f6;
+}
+
+/* =========================================================================
+   MEDIA QUERY ADAPTATIONS
+   ========================================================================= */
+@media (max-width: 768px) {
+  .footer-top-deck {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .footer-brand-column, 
+  .footer-newsletter-column {
+    max-width: 100%;
+    width: 100%;
+  }
+  .newsletter-form-container {
+    flex-direction: column;
+  }
+  .newsletter-submit-btn {
+    padding: 0.75rem 0;
+  }
+  .footer-bottom-deck {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}

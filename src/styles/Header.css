@@ -1,0 +1,174 @@
+ 
+/* Floating Header */
+
+.glass-header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 0 20px;
+}
+
+/* Glass Navbar */
+
+.glass-navbar {
+  max-width: 1280px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 80px;
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Logo */
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Menu */
+
+.nav-menu {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: .3s;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transform: translateX(-50%);
+  transition: .3s;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Button */
+
+.book-btn,
+.mobile-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+
+  backdrop-filter: blur(10px);
+
+  transition: .3s;
+}
+
+.book-btn:hover,
+.mobile-btn:hover {
+  transform: translateY(-3px);
+}
+
+.mobile-btn {
+  display: none;
+}
+
+/* Hamburger */
+
+.hamburger {
+  display: none;
+  width: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  margin: 6px 0;
+  transition: .3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile */
+
+@media (max-width: 991px) {
+
+  .book-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+
+    width: 320px;
+    height: 100vh;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    background: rgba(15, 23, 42, 0.95);
+
+    backdrop-filter: blur(20px);
+
+    transition: .4s ease;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .mobile-btn {
+    display: block;
+  }
+}

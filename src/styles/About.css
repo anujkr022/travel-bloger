@@ -1,0 +1,403 @@
+/* ==========================================================================
+   Shared Slider Structural Subsystems
+   ========================================================================== */
+
+.section-heading-slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.section-heading-slider-wrapper .section-heading {
+  margin-bottom: 0;
+}
+
+.package-slider-controls,
+.blog-slider-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pkg-nav-btn,
+.blog-nav-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: inherit;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pkg-nav-btn:hover,
+.blog-nav-btn:hover {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: #ffffff;
+}
+
+/* --- Track 1 Viewport Controls (Packages) --- */
+.package-slider-mask {
+  overflow: hidden;
+  width: 100%;
+}
+
+.package-slider-track {
+  display: flex;
+  width: 100%;
+}
+
+.package-card.slider-item-card {
+  flex-shrink: 0;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+
+/* --- Track 2 Viewport Controls (Blogs) --- */
+.blog-slider-mask {
+  overflow: hidden;
+  width: 100%;
+}
+
+.blog-slider-track {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+}
+
+.blog-card.slider-item-blog {
+  flex-shrink: 0;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+
+
+
+/* ==========================================================================
+   Package Slider Layout Stylesheet
+   ========================================================================== */
+
+.section-heading-slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.section-heading-slider-wrapper .section-heading {
+  margin-bottom: 0;
+}
+
+.package-slider-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pkg-nav-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: inherit;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pkg-nav-btn:hover {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: #ffffff;
+}
+
+/* Masked sliding container track */
+.package-slider-mask {
+  overflow: hidden;
+  width: 100%;
+}
+
+.package-slider-track {
+  display: flex;
+  width: 100%;
+}
+
+/* Ensure individual slider items maintain scaling bounds */
+.package-card.slider-item-card {
+  flex-shrink: 0;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+
+
+
+/* ==========================================================================
+   About.css - Travel Landing Page Styling & Custom Animations
+   ========================================================================== */
+
+.travel-page-wrapper {
+  background-color: #030712;
+  color: #f3f4f6;
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}/* --- Navbar Container --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Brand Logo Link --- */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: none; /* keeps standard cursor hidden for custom cursor tracking */
+}
+
+/* --- Navigation Menu --- */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #a1a1aa;
+  text-decoration: none;
+  margin-left: 2.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  padding: 4px 0;
+  cursor: none; /* keeps standard cursor hidden for custom cursor tracking */
+  transition: color 0.2s ease;
+}
+
+/* Hover State */
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* Active Page State (Managed by React Router) */
+.nav-links a.active {
+  color: #ffffff;
+}
+
+/* Animated Indicator Dot for Active Page */
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: #6366f1; /* accent color matching your portfolio */
+  border-radius: 50%;
+  animation: scaleIn 0.2s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: translateX(-50%) scale(0);
+  }
+  to {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* Hero / About Layout Grid */
+.about-section {
+  padding: 8rem 2rem 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+
+@media (min-width: 768px) {
+  .about-container { 
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+.about-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.about-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #6366f1;
+  text-transform: uppercase;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 1rem 0;
+  background: linear-gradient(to right, #ffffff, #9ca3af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content p {
+  color: #9ca3af;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Stats Blocks */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-box {
+  background: rgba(31, 41, 55, 0.4);
+  border: 1px solid rgba(75, 85, 99, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #6366f1;
+  margin: 0 0 0.25rem 0;
+}
+
+.stat-box p { 
+  font-size: 0.85rem; 
+  margin: 0; 
+  color: #9ca3af; 
+}
+
+.primary-btn {
+  background: #6366f1;
+  color: white;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primary-btn:hover { 
+  background: #4f46e5; 
+}
+
+/* Generic Grids & Section Headings */
+.package-section, 
+.blog-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-heading h2 { 
+  font-size: 2.25rem; 
+  font-weight: 800; 
+  margin-bottom: 0.5rem; 
+}
+
+.section-heading p { 
+  color: #9ca3af; 
+}
+
+.package-grid, 
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Feature Cards Styling */
+.package-card, 
+.blog-card {
+  background: rgba(31, 41, 55, 0.3);
+  border: 1px solid rgba(75, 85, 99, 0.2);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.package-card:hover, 
+.blog-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.package-card img, 
+.blog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.package-content, 
+.blog-content { 
+  padding: 1.5rem; 
+}
+
+.package-content h3, 
+.blog-content h3 { 
+  font-size: 1.25rem; 
+  margin: 0 0 0.5rem 0; 
+}
+
+.package-content p, 
+.blog-content p { 
+  color: #9ca3af; 
+  font-size: 0.9rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.package-content button {
+  width: 100%;
+  background: rgba(99, 102, 241, 0.1);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.package-content button:hover {
+  background: #6366f1;
+  color: white;
+}

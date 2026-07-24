@@ -1,0 +1,201 @@
+/* ==========================================================================
+   ContactLayout.css - Premium Travel Editorial Grid
+   ========================================================================== */
+
+.contact-canvas {
+  background-color: #090d16;
+  color: #f3f4f6;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-layout-box {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  background: rgba(31, 41, 55, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 2rem;
+  padding: 3rem;
+  backdrop-filter: blur(12px);
+}
+
+@media (min-width: 992px) {
+  .contact-layout-box {
+    grid-template-columns: 1.1fr 1fr;
+    padding: 4rem;
+  }
+}
+
+/* --- LEFT SIDE: TRAVEL POSTCARD DETAILS --- */
+.contact-editorial-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-tagline {
+  color: #6366f1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.contact-editorial-panel h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.5rem 0;
+  background: linear-gradient(to right, #ffffff, #9ca3af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-editorial-panel p {
+  color: #9ca3af;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 3rem;
+}
+
+.contact-channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.channel-node {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.channel-icon-avatar {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  color: #818cf8;
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.channel-info-block h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: #ffffff;
+}
+
+.channel-info-block p {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.channel-info-block a {
+  color: #818cf8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.channel-info-block a:hover {
+  color: #6366f1;
+}
+
+/* --- RIGHT SIDE: MODERN FORM INTERFACE --- */
+.contact-form-holder {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+}
+
+.travel-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.travel-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.travel-field-wrapper label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+}
+
+.travel-field-wrapper input,
+.travel-field-wrapper textarea {
+  background: rgba(11, 15, 25, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.travel-field-wrapper input:focus,
+.travel-field-wrapper textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: rgba(11, 15, 25, 0.8);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.travel-field-wrapper textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.travel-submit-button {
+  width: 100%;
+  background: #6366f1;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.travel-submit-button:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+}
+
+.travel-submit-button:active {
+  transform: translateY(0);
+}
